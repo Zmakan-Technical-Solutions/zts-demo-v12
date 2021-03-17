@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+
+		<template id="qpay_acquirer_button">
+			<div>
+				<input type="hidden" name="data_set" t-att-data-action-url="tx_url" data-remove-me=""/>
+				<input type="hidden" name="action" t-att-value="action" />
+				<input type="hidden" name="gatewayId" t-att-value="gatewayId" />
+				<input type="hidden" name="secretKey" t-att-value="secretKey" />
+				<input type="hidden" name="referenceId" t-att-value="referenceId" />
+				<input type='hidden' name='amount' t-att-value="amount" />
+				<input type="hidden" name="currency" t-att-value="currency" />
+				<input type="hidden" name="mode" t-att-value="mode" />
+				<input type="hidden" name="description" t-att-value="description" />
+				<input type="hidden" name="referenceId" t-att-value="referenceId" />
+				<input type='hidden' name='returnUrl' t-att-value="returnUrl" />
+				<input type="hidden" name="name" t-att-value="name" />
+				<input type="hidden" name="address" t-att-value="address" />
+				<input type="hidden" name="city" t-att-value="city" />
+				<input type="hidden" name="state" t-att-value="state" />
+				<input type='hidden' name='country' t-att-value="country" />
+				<input type='hidden' name='phone' t-att-value="phone" />
+				<input type='hidden' name='email' t-att-value="email" />
+
+<!--				<button type="submit" width="100px" t-att-class="submit_class">-->
+<!--					<img t-if="not submit_txt"-->
+<!--						 src="zts_qpay_integration/static/description/icon.png" />-->
+<!--					<span t-if="submit_txt">-->
+<!--						<t t-esc="submit_txt" />-->
+<!--						<span class="fa fa-long-arrow-right" />-->
+<!--					</span>-->
+<!--				</button>-->
+			</div>
+
+		</template>
+
+	</data>
+</odoo>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <record id="payment_acquirer_qpay" model="payment.acquirer">
+            <field name="name">Pay Online</field>
+            <field name="image" type="base64" file="zts_qpay_integration/static/description/icon.png"/>
+            <field name="provider">qpay_73lines</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="view_template_id" ref="qpay_acquirer_button"/>
+            <field name="environment">test</field>
+            <field name="pre_msg"><![CDATA[
+<p>You will be redirected to the qpay website after clicking on the payment button.</p>]]></field>
+            <field name="gatewayId">dummy</field>
+            <field name="secret_key">dummy</field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        
+        <record id="acquirer_form_qpay" model="ir.ui.view">
+            <field name="name">acquirer.form.qpay</field>
+            <field name="model">payment.acquirer</field>
+            <field name="inherit_id" ref="payment.acquirer_form"/>
+            <field name="arch" type="xml">
+                <xpath expr='//group[@name="acquirer"]' position='after'>
+                    <group attrs="{'invisible': [('provider', '!=', 'qpay_73lines')]}">
+                        <field name="gatewayId"/>
+                        <field name="secret_key"/>
+                        <a colspan="2"
+                           href="https://demomerchant.qpayi.com/static.nexxuspay.com/assets/export/QPAY_Payment_Gateway_Integration_Guide_v2.1.pdf" target="_blank">How to configure your Qpay account (look for Signup) ?</a>
+                    </group>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</openerp>
